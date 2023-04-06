@@ -5,8 +5,14 @@ const port = 5000;
 // setup express static files
 app.use(express.static('./assets'));
 
+
+
 // setup express-ejs-layouts
 app.use(require('express-ejs-layouts'));
+
+// extract styles and scripts from pages to layout.ejs
+app.set('layout extractStyles',true);
+app.set('layout extractScripts',true);
 
 //use express router
 app.use('/',require('./routes/index'));
