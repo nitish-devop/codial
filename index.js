@@ -2,6 +2,10 @@ const express = require('express');
 const app = express();
 const port = 5000;
 
+// setup express static files
+app.use(express.static('./assets'));
+
+// setup express-ejs-layouts
 app.use(require('express-ejs-layouts'));
 
 //use express router
