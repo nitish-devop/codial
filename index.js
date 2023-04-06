@@ -5,8 +5,8 @@ const port = 5000;
 //use express router
 app.use('/',require('./routes/index'));
 
-// use ejs and setup views
-app.use('view engine','ejs');
+// set ejs and setup views
+app.set('view engine','ejs');
 app.set('views','./views');
 
 
