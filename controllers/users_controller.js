@@ -1,3 +1,5 @@
 module.exports.profile = function(req,res){
-    res.end("<h1>Profile | Codial</h1>");
+    return res.render('user_profile',{
+        title : 'Profile'
+    });
 }
